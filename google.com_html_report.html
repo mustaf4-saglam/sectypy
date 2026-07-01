@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SectyPy Tarama Raporu - google.com</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #f8fafc;
+            --text-muted: #94a3b8;
+            --primary: #38bdf8;
+            --success: #4ade80;
+            --warning: #facc15;
+            --border: #334155;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        header {
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        h1 { margin: 0; color: var(--primary); font-size: 2.5rem; }
+        .meta { color: var(--text-muted); margin-top: 5px; }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .card h2 {
+            margin-top: 0;
+            color: var(--primary);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
+            font-size: 1.4rem;
+        }
+        .full-width {
+            grid-column: 1 / -1;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            text-align: left;
+            padding: 10px;
+            border-bottom: 1px solid var(--border);
+        }
+        th { color: var(--text-muted); font-weight: 600; }
+        .port-badge {
+            display: inline-block;
+            background-color: rgba(74, 222, 128, 0.1);
+            color: var(--success);
+            padding: 4px 10px;
+            border-radius: 6px;
+            margin: 4px;
+            font-family: monospace;
+            font-size: 0.95rem;
+            border: 1px solid rgba(74, 222, 128, 0.2);
+        }
+        .no-ports { color: var(--warning); font-style: italic; }
+        pre {
+            background-color: #0b0f19;
+            padding: 12px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+            border: 1px solid var(--border);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>SectyPy Tarama Raporu</h1>
+            <div class="meta">Hedef Domain: <strong>google.com</strong> | Tarama Zamanı: 2026-07-01 16:13:50</div>
+        </header>
+
+        <div class="grid">
+            <div class="card">
+                <h2>WHOIS Bilgileri</h2>
+                <table>
+                    <tr><th>Registrar:</th><td>MarkMonitor, Inc.</td></tr>
+                    <tr><th>Oluşturulma:</th><td>1997-09-15 04:00:00</td></tr>
+                    <tr><th>Bitiş:</th><td>{'2028-09-14 04:00:00'}</td></tr>
+                    <tr><th>Name Servers:</th><td>NS1.GOOGLE.COM, NS2.GOOGLE.COM, NS3.GOOGLE.COM, NS4.GOOGLE.COM</td></tr>
+                </table>
+            </div>
+
+            <div class="card">
+                <h2>Web Teknolojileri</h2>
+                <pre>Herhangi bir teknoloji tespiti yapılamadı.</pre>
+            </div>
+
+            <div class="card full-width">
+                <h2>Açık Portlar</h2>
+                <div>
+                    <span class="no-ports">Taranan aralıkta açık port bulunamadı veya sistem engelledi.</span>
+                </div>
+            </div>
+
+            <div class="card full-width">
+                <h2>HTTP Yanıt Başlıkları (Headers)</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Başlık (Header)</th>
+                            <th>Değer (Value)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {'status_code': 200, 'server': 'gws', 'Content-Type': 'text/html; charset=ISO-8859-1', 'yonlendirilen_baglanti': 0, 'security_headers': {'X-Frame-Options': 'SAMEORIGIN'}}
+                        </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
